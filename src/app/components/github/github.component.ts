@@ -11,10 +11,11 @@ export class GithubComponent {
 
   user: any;
   repos: any;
-  username: any;
+  username: any = 'Tusharbalar';
 
   constructor(private _githubService: GithubService) {
     this.user = false;
+    this.search();
   }
 
   search() {

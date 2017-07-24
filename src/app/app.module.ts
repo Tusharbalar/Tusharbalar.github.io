@@ -7,6 +7,7 @@ import { rootRouterConfig } from './app.routes';
 import { AlertModule } from 'ngx-bootstrap';
 import { GithubService } from './providers/github.service';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     AlertModule.forRoot()
   ],
