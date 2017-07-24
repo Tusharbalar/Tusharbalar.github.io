@@ -8,6 +8,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { GithubService } from './providers/github.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    RouterModule.forRoot(rootRouterConfig),
     AlertModule.forRoot()
   ],
-  providers: [GithubService],
+  providers: [GithubService, { provide: LocationStrategy, useClass: PathLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
