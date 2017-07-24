@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './components/github/github.component';
 import { rootRouterConfig } from './app.routes';
+import { AlertModule } from 'ngx-bootstrap';
+import { GithubService } from './providers/github.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,11 @@ import { rootRouterConfig } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    HttpModule,
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
