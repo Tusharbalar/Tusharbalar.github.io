@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './components/github/github.component';
+import { rootRouterConfig } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { GithubComponent } from './components/github/github.component';
     GithubComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
