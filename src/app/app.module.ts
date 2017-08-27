@@ -11,11 +11,13 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { IAppState, rootReducer } from './store';
 import { NgRedux, NgReduxModule } from 'ng2-redux';
+import { ReduxDemoComponent } from './components/redux-demo/redux-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubComponent
+    GithubComponent,
+    ReduxDemoComponent
   ],
   imports: [
     BrowserModule,
