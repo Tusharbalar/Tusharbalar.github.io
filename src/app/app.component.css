@@ -41,6 +41,26 @@ a[aria-expanded="true"]::before {
 
 .custom-nav {
   position: fixed;
-  padding-left: 250px;
+  padding-left: 255px;
   border-radius: 0px;
+}
+
+.btn-transparent {
+  background: transparent;
+  padding: 7px 7px 0px 7px;
+  color: wheat;
+}
+
+.btn-light.active, .btn-light:active, .show>.btn-light.dropdown-toggle {
+  border-color: transparent;
+}
+
+.btn-light:hover {
+  border-color: wheat;
+  border-radius: 100%;
+}
+
+.btn-light:focus {
+  box-shadow: none;
+  outline: none;
 }
