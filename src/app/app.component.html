@@ -1,5 +1,4 @@
-<!-- Static navbar -->
-<nav class="navbar navbar-default navbar-static-top">
+<!-- <nav class="navbar navbar-default navbar-static-top">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
@@ -15,7 +14,6 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a routerLink="/home">Home</a></li>
 				<li><a href="#about">About</a></li>
-				<!-- <li><a routerLink="/redux-demo">Redux Demo</a></li> -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -35,9 +33,43 @@
 				<li><a href="../navbar-fixed-top/">Fixed top</a></li>
 			</ul>
 		</div>
-		<!--/.nav-collapse -->
 	</div>
 </nav>
 <div class="container">
 	<router-outlet></router-outlet>
-</div>
+</div> -->
+
+<div class="wrapper">
+	
+	<!-- Sidebar -->
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>Collapsible Sidebar</h3>
+		</div>
+
+		<ul class="list-unstyled components">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+
+			<li>
+				<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+				<ul class="collapse list-unstyled" id="homeSubmenu">
+					<li><a href="#">Page</a></li>
+					<li><a href="#">Page</a></li>
+					<li><a href="#">Page</a></li>
+				</ul>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+			
+		</ul>
+	</nav>
+
+	<div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+					<i class="glyphicon glyphicon-align-left"></i>
+					Toggle Sidebar
+				</button>
+		<router-outlet></router-outlet>
+	</div>
+
+</div>  
