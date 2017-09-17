@@ -22,6 +22,9 @@
       $('#sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
       });
+      $('ul.components li').click(function(){ 
+        $(this).addClass('active').siblings().removeClass('active');
+      }); 
     });
   </script>
 </body>
