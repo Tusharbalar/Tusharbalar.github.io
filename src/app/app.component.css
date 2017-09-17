@@ -38,3 +38,9 @@ a[aria-expanded="true"]::before {
       margin-left: 0;
   }
 }
+
+.custom-nav {
+  position: fixed;
+  padding-left: 250px;
+  border-radius: 0px;
+}

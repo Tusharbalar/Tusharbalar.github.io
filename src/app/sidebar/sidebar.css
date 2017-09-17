@@ -22,14 +22,14 @@ a, a:hover, a:focus {
 
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
-    background: #7386D5;
+    background: #17a2b8;
     color: #fff;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
+    padding: 3px 0px 4px 15px;
+    background: #343a40;
 }
 
 #sidebar ul.components {
