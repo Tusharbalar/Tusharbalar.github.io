@@ -1,12 +1,11 @@
 .wrapper {
   display: flex;
-  align-items: stretch;
 }
 
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #sidebar.active {
@@ -63,4 +62,27 @@ a[aria-expanded="true"]::before {
 .btn-light:focus {
   box-shadow: none;
   outline: none;
+}
+
+#content {
+  width: calc(100% - 250px);
+  padding: 40px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#content.active {
+  width: 100%;
+}
+ul.CTAs {
+  padding: 20px;
+}
+a.article, a.article:hover {
+  background: rgba(109, 102, 92, 0.18) !important;
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  font-family: fantasy;
 }

@@ -25,8 +25,16 @@ a, a:hover, a:focus {
     background: #333;
     color: #fff;
     transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    width: 250px;
 }
-
+#sidebar.active {
+    margin-left: -250px;
+}
 #sidebar .sidebar-header {
     padding: 3px 0px 4px 15px;
     background: #343a40;

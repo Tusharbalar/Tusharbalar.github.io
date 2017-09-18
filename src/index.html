@@ -18,13 +18,23 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"> </script>
   <script>
     $(document).ready(function () {
+      $('#sidebar').niceScroll({
+        cursorcolor: '#53619d', // Changing the scrollbar color
+        cursorwidth: 4, // Changing the scrollbar width
+        cursorborder: 'none', // Rempving the scrollbar border
+      });
+
       $('#sidebarCollapse').on('click', function () {
-          $('#sidebar').toggleClass('active');
+        $('#sidebar, #content').toggleClass('active');
       });
       $('ul.components li').click(function(){ 
         $(this).addClass('active').siblings().removeClass('active');
+      }); 
+      $('ul.CTAs li').click(function(){ 
+        $("ul.components li").removeClass('active');
       }); 
     });
   </script>
