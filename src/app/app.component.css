@@ -36,6 +36,9 @@ a[aria-expanded="true"]::before {
   #sidebar.active {
       margin-left: 0;
   }
+  .custom-nav {
+    padding-left: 0px;
+  }
 }
 
 .custom-nav {

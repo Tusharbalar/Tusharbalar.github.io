@@ -1,42 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Portfolio">
-  <meta name="author" content="Tushar Balar">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <app-root></app-root>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"> </script>
-  <script>
-    $(document).ready(function () {
-      $('#sidebar').niceScroll({
-        cursorcolor: '#53619d', // Changing the scrollbar color
-        cursorwidth: 4, // Changing the scrollbar width
-        cursorborder: 'none', // Rempving the scrollbar border
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Collapsible sidebar using Bootstrap 3</title>
+    <base href="/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <app-root></app-root>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#sidebar").niceScroll({
+          cursorcolor: '#53619d',
+          cursorwidth: 4,
+          cursorborder: 'none'
+        });
+        $('#sidebarCollapse').on('click', function () {
+          $('#sidebar, #content').toggleClass('active');
+          $('.collapse.in').toggleClass('in');
+          $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+        $('ul.components li').click(function(){ 
+          $(this).addClass('active').siblings().removeClass('active');
+        }); 
+        $('ul.CTAs li').click(function(){ 
+          $("ul.components li").removeClass('active');
+        });
       });
-
-      $('#sidebarCollapse').on('click', function () {
-        $('#sidebar, #content').toggleClass('active');
-      });
-      $('ul.components li').click(function(){ 
-        $(this).addClass('active').siblings().removeClass('active');
-      }); 
-      $('ul.CTAs li').click(function(){ 
-        $("ul.components li").removeClass('active');
-      }); 
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
